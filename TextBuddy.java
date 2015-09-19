@@ -83,32 +83,32 @@ public class TextBuddy {
 		String parameters = getParam(userCommand);
 
 		switch (commandType) {
-		case ADD:
+		case ADD :
 			return addContent(parameters);
 
-		case DISPLAY:
+		case DISPLAY :
 			return getContent(parameters);
 
-		case DELETE:
+		case DELETE :
 			return deleteContent(parameters);
 
-		case CLEAR:
+		case CLEAR :
 			return clearContent(parameters);
 
-		case SORT:
+		case SORT :
 			return sortContent(parameters);
 
-		case SEARCH:
+		case SEARCH :
 			return searchContent(parameters);
 
-		case INVALID:
+		case INVALID :
 			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
 
-		case EXIT:
+		case EXIT :
 			saveProgram();
 			System.exit(0);
 
-		default:
+		default :
 			return MESSAGE_INVALID_FORMAT;
 		}
 	}
@@ -283,11 +283,9 @@ public class TextBuddy {
 		for (int i = 0; i < listToFormat.size(); i++) {
 			formattedContentList = addNumber(formattedContentList, count);
 			formattedContentList += listToFormat.get(i);
-
 			if (!isLastLine(textContent.size(), i)) {
 				formattedContentList += "\n";
 			}
-
 			count++;
 		}
 		return formattedContentList;
@@ -341,33 +339,33 @@ public class TextBuddy {
 		int paramsLength = getParamsLength(inputParams);
 
 		switch (commandType) {
-		case ADD:
+		case ADD :
 			if (paramsLength > 0) {
 				return true;
 			} else {
 				return false;
 			}
 
-		case SEARCH:
+		case SEARCH :
 			if (paramsLength > 0) {
 				return true;
 			} else {
 				return false;
 			}
 
-		case DELETE:
+		case DELETE :
 			return hasSameLength(paramsLength, PARAM_SIZE_FOR_DELETE);
 
-		case DISPLAY:
+		case DISPLAY :
 			return hasSameLength(paramsLength, PARAM_SIZE_FOR_DISPLAY);
 
-		case SORT:
+		case SORT :
 			return hasSameLength(paramsLength, PARAM_SIZE_FOR_SORT);
 
-		case CLEAR:
+		case CLEAR :
 			return hasSameLength(paramsLength, PARAM_SIZE_FOR_CLEAR);
 
-		default:
+		default :
 			return false;
 		}
 	}
