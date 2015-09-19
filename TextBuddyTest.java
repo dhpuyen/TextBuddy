@@ -18,16 +18,13 @@ public class TextBuddyTest extends TextBuddy {
 	private static final String TEST_STRING_5 = "angle";
 
 	private static final String TEST_LIST_SORTED_1 = "1. " + TEST_STRING_3 + "\n" + 
-												     "2. " + TEST_STRING_1 + "\n" + 
-												     "3. " + TEST_STRING_2 + "\n" + 
-												     "4. " + TEST_STRING_4 + "";
+							 "2. " + TEST_STRING_1 + "\n" + 
+							 "3. " + TEST_STRING_2 + "\n" + 
+							 "4. " + TEST_STRING_4 + "";
 	private static final String TEST_LIST_SORTED_2 = "1. " + TEST_STRING_3 + "\n" + 
-		     										 "2. " + TEST_STRING_1 + "\n" + 
-		     										 "3. " + TEST_STRING_2 + "" ; 
+		     					 "2. " + TEST_STRING_1 + "\n" + 
+		     					 "3. " + TEST_STRING_2 + "" ; 
 
-	
-	TextBuddy test = new TextBuddy();
-	
 	@Before
 	public void setUpFile() throws Exception {
 		String[] args = {"test.txt"};
