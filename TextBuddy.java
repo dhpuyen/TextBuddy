@@ -382,7 +382,7 @@ public class TextBuddy {
 	 * This operation is used to count the number of parameters
 	 * 
 	 * @param inputParams
-	 *            the parameters user enter, excluding the command word
+	 *            the parameters the user enter, excluding the command word
 	 * @return the number of parameters
 	 */
 	public static int getParamsLength(String inputParams) {
